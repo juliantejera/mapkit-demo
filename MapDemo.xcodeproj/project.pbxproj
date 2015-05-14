@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		9004982E1B04DB6F00B03997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9004982D1B04DB6F00B03997 /* AppDelegate.swift */; };
 		900498311B04DB6F00B03997 /* MapDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9004982F1B04DB6F00B03997 /* MapDemo.xcdatamodeld */; };
-		900498331B04DB6F00B03997 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900498321B04DB6F00B03997 /* ViewController.swift */; };
 		900498361B04DB6F00B03997 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 900498341B04DB6F00B03997 /* Main.storyboard */; };
 		900498381B04DB6F00B03997 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900498371B04DB6F00B03997 /* Images.xcassets */; };
 		9004983B1B04DB6F00B03997 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 900498391B04DB6F00B03997 /* LaunchScreen.xib */; };
 		900498471B04DB6F00B03997 /* MapDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900498461B04DB6F00B03997 /* MapDemoTests.swift */; };
+		900498511B04DB8000B03997 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900498501B04DB8000B03997 /* MapKit.framework */; };
+		900498531B04DC0400B03997 /* KeywordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900498521B04DC0400B03997 /* KeywordsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +32,14 @@
 		9004982C1B04DB6F00B03997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9004982D1B04DB6F00B03997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		900498301B04DB6F00B03997 /* MapDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MapDemo.xcdatamodel; sourceTree = "<group>"; };
-		900498321B04DB6F00B03997 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		900498351B04DB6F00B03997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		900498371B04DB6F00B03997 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9004983A1B04DB6F00B03997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		900498401B04DB6F00B03997 /* MapDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		900498451B04DB6F00B03997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		900498461B04DB6F00B03997 /* MapDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDemoTests.swift; sourceTree = "<group>"; };
+		900498501B04DB8000B03997 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		900498521B04DC0400B03997 /* KeywordsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeywordsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				900498511B04DB8000B03997 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +64,7 @@
 		9004981F1B04DB6F00B03997 = {
 			isa = PBXGroup;
 			children = (
+				900498501B04DB8000B03997 /* MapKit.framework */,
 				9004982A1B04DB6F00B03997 /* MapDemo */,
 				900498431B04DB6F00B03997 /* MapDemoTests */,
 				900498291B04DB6F00B03997 /* Products */,
@@ -80,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				9004982D1B04DB6F00B03997 /* AppDelegate.swift */,
-				900498321B04DB6F00B03997 /* ViewController.swift */,
+				900498521B04DC0400B03997 /* KeywordsTableViewController.swift */,
 				900498341B04DB6F00B03997 /* Main.storyboard */,
 				900498371B04DB6F00B03997 /* Images.xcassets */,
 				900498391B04DB6F00B03997 /* LaunchScreen.xib */,
@@ -164,6 +168,11 @@
 				TargetAttributes = {
 					900498271B04DB6F00B03997 = {
 						CreatedOnToolsVersion = 6.3.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					9004983F1B04DB6F00B03997 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -215,7 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				900498331B04DB6F00B03997 /* ViewController.swift in Sources */,
+				900498531B04DC0400B03997 /* KeywordsTableViewController.swift in Sources */,
 				9004982E1B04DB6F00B03997 /* AppDelegate.swift in Sources */,
 				900498311B04DB6F00B03997 /* MapDemo.xcdatamodeld in Sources */,
 			);
