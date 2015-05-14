@@ -15,6 +15,10 @@
 		900498471B04DB6F00B03997 /* MapDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900498461B04DB6F00B03997 /* MapDemoTests.swift */; };
 		900498511B04DB8000B03997 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900498501B04DB8000B03997 /* MapKit.framework */; };
 		900498531B04DC0400B03997 /* KeywordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900498521B04DC0400B03997 /* KeywordsTableViewController.swift */; };
+		900498551B04E19C00B03997 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900498541B04E19B00B03997 /* ViewControllerExtension.swift */; };
+		900498571B04E27E00B03997 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900498561B04E27E00B03997 /* MapViewController.swift */; };
+		900498591B04E63300B03997 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900498581B04E63300B03997 /* Place.swift */; };
+		904D3D941B04F33D002587BF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D3D931B04F33D002587BF /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		900498461B04DB6F00B03997 /* MapDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDemoTests.swift; sourceTree = "<group>"; };
 		900498501B04DB8000B03997 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		900498521B04DC0400B03997 /* KeywordsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeywordsTableViewController.swift; sourceTree = "<group>"; };
+		900498541B04E19B00B03997 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		900498561B04E27E00B03997 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		900498581B04E63300B03997 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		904D3D931B04F33D002587BF /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,10 @@
 			children = (
 				9004982D1B04DB6F00B03997 /* AppDelegate.swift */,
 				900498521B04DC0400B03997 /* KeywordsTableViewController.swift */,
+				900498541B04E19B00B03997 /* ViewControllerExtension.swift */,
+				904D3D931B04F33D002587BF /* WebViewController.swift */,
+				900498581B04E63300B03997 /* Place.swift */,
+				900498561B04E27E00B03997 /* MapViewController.swift */,
 				900498341B04DB6F00B03997 /* Main.storyboard */,
 				900498371B04DB6F00B03997 /* Images.xcassets */,
 				900498391B04DB6F00B03997 /* LaunchScreen.xib */,
@@ -224,8 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				900498551B04E19C00B03997 /* ViewControllerExtension.swift in Sources */,
+				900498591B04E63300B03997 /* Place.swift in Sources */,
 				900498531B04DC0400B03997 /* KeywordsTableViewController.swift in Sources */,
 				9004982E1B04DB6F00B03997 /* AppDelegate.swift in Sources */,
+				904D3D941B04F33D002587BF /* WebViewController.swift in Sources */,
+				900498571B04E27E00B03997 /* MapViewController.swift in Sources */,
 				900498311B04DB6F00B03997 /* MapDemo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +440,7 @@
 				9004984C1B04DB6F00B03997 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9004984D1B04DB6F00B03997 /* Build configuration list for PBXNativeTarget "MapDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +449,7 @@
 				9004984F1B04DB6F00B03997 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

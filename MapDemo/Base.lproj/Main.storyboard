@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vwY-fx-EVQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oOf-Pd-1QU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -26,6 +26,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="h8C-LI-5Y4" kind="showDetail" identifier="MapSegue" id="e8g-Bn-7vZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,7 +40,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWX-Il-Gu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216" y="447"/>
+            <point key="canvasLocation" x="1384" y="1035"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="An4-Nl-DMN">
@@ -55,7 +58,120 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2cW-XZ-T7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="404" y="447"/>
+            <point key="canvasLocation" x="528" y="1035"/>
+        </scene>
+        <!--Restaurants-->
+        <scene sceneID="zPf-yn-5aq">
+            <objects>
+                <viewController id="R6D-6d-7rH" customClass="MapViewController" customModule="MapDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7rP-e1-QiH"/>
+                        <viewControllerLayoutGuide type="bottom" id="dIz-5O-qVl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aQK-dw-yMA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vWS-iS-ooP">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vWS-iS-ooP" secondAttribute="trailing" id="MGi-Cb-ydZ"/>
+                            <constraint firstItem="vWS-iS-ooP" firstAttribute="leading" secondItem="aQK-dw-yMA" secondAttribute="leading" id="fIT-DX-xD5"/>
+                            <constraint firstItem="vWS-iS-ooP" firstAttribute="top" secondItem="aQK-dw-yMA" secondAttribute="top" id="m3k-76-dXd"/>
+                            <constraint firstItem="vWS-iS-ooP" firstAttribute="bottom" secondItem="dIz-5O-qVl" secondAttribute="top" id="vNY-9K-gKl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Restaurants" id="wS8-d7-jwH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Coc-Ov-bVQ">
+                            <connections>
+                                <action selector="refresh:" destination="R6D-6d-7rH" id="Lrw-Qd-PWj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="vWS-iS-ooP" id="sBy-9K-xmG"/>
+                        <segue destination="caf-f5-jAT" kind="show" identifier="WebSegue" id="nBf-aa-LkH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kte-ua-XUQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1384" y="1840"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="eOW-3O-ixe">
+            <objects>
+                <viewController id="caf-f5-jAT" customClass="WebViewController" customModule="MapDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mg3-ki-qee"/>
+                        <viewControllerLayoutGuide type="bottom" id="fbk-Qo-pTQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pt6-W5-JAG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDF-cW-Iaa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3UK-t1-X2s">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CDF-cW-Iaa" firstAttribute="leading" secondItem="Pt6-W5-JAG" secondAttribute="leading" id="5qS-OQ-Cgg"/>
+                            <constraint firstItem="CDF-cW-Iaa" firstAttribute="bottom" secondItem="fbk-Qo-pTQ" secondAttribute="top" id="E6S-Ze-IW8"/>
+                            <constraint firstAttribute="trailing" secondItem="CDF-cW-Iaa" secondAttribute="trailing" id="LUi-Y0-i5D"/>
+                            <constraint firstItem="CDF-cW-Iaa" firstAttribute="top" secondItem="Pt6-W5-JAG" secondAttribute="top" id="TqS-vk-krU"/>
+                            <constraint firstItem="3UK-t1-X2s" firstAttribute="centerX" secondItem="CDF-cW-Iaa" secondAttribute="centerX" id="U5g-zr-bvj"/>
+                            <constraint firstItem="3UK-t1-X2s" firstAttribute="centerY" secondItem="CDF-cW-Iaa" secondAttribute="centerY" id="V9K-cf-v3M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="3UK-t1-X2s" id="iLL-1X-bNU"/>
+                        <outlet property="webView" destination="CDF-cW-Iaa" id="CLW-CY-iAy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z6h-TS-Yar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2102" y="1840"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="XhL-Hn-NVd">
+            <objects>
+                <splitViewController id="oOf-Pd-1QU" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="h8C-LI-5Y4" kind="relationship" relationship="detailViewController" id="31v-KW-1Wm"/>
+                        <segue destination="vwY-fx-EVQ" kind="relationship" relationship="masterViewController" id="bZa-dN-7JP"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdG-0e-dbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-292" y="1512"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zxh-fh-pFd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h8C-LI-5Y4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jaH-Or-aCy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R6D-6d-7rH" kind="relationship" relationship="rootViewController" id="Zi3-2h-jdF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4GV-6n-Pwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528" y="1840"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="e8g-Bn-7vZ"/>
+    </inferredMetricsTieBreakers>
 </document>
