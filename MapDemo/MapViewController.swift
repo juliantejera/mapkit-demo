@@ -90,7 +90,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
         if let place = view.annotation as? Place {
-            self.performSegueWithIdentifier("WebSegue", sender: place)
+            place.mapItem.openInMapsWithLaunchOptions(nil)
+            //self.performSegueWithIdentifier("WebSegue", sender: place)
         }
     }
     

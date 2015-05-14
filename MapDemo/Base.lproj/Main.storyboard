@@ -72,8 +72,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vWS-iS-ooP">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vWS-iS-ooP">
+                                <rect key="frame" x="-6" y="0.0" width="600" height="600"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -92,7 +92,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="vWS-iS-ooP" id="sBy-9K-xmG"/>
+                        <outlet property="mapView" destination="vWS-iS-ooP" id="pAp-f9-fDT"/>
                         <segue destination="caf-f5-jAT" kind="show" identifier="WebSegue" id="nBf-aa-LkH"/>
                     </connections>
                 </viewController>
@@ -150,7 +150,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdG-0e-dbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-292" y="1512"/>
+            <point key="canvasLocation" x="-189" y="1433"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zxh-fh-pFd">
@@ -172,6 +172,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="e8g-Bn-7vZ"/>
+        <segue reference="31v-KW-1Wm"/>
     </inferredMetricsTieBreakers>
 </document>
